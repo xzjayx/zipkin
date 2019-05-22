@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+         enabled: true
+         lowerCaseServiceId: true
+      routes:
+        - id: feign-client
+          uri: lb://feign-client
+          predicates:
+            - Path=/feign-client/**
+          filters:
+            - StripPrefix=1
+  application:
+    name: gateway-server
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411
+server:
+  port: 5000
+feign:
+    hystrix:
+      enabled: true
+logging:
+  level:
+    org.springframework.cloud.gateway: debug

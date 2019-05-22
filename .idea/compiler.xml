@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-server" />
+        <module name="feign-client" />
+        <module name="gateway-server" />
+        <module name="user-client" />
+        <module name="user-service" />
+        <module name="zipkin" />
+        <module name="zipkin-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eureka-server" target="1.8" />
+      <module name="feign-client" target="1.8" />
+      <module name="gateway-server" target="1.8" />
+      <module name="user-client" target="1.8" />
+      <module name="user-service" target="1.8" />
+      <module name="zipkin" target="1.8" />
+      <module name="zipkin-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka-server" options="-parameters" />
+      <module name="feign-client" options="-parameters" />
+      <module name="gateway-server" options="-parameters" />
+      <module name="user-client" options="-parameters" />
+      <module name="user-service" options="-parameters" />
+      <module name="zipkin" options="-parameters" />
+      <module name="zipkin-server" options="-parameters" />
+    </option>
+  </component>
+</project>
